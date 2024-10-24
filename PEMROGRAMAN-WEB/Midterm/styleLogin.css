@@ -1,0 +1,67 @@
+/* General Body Styling */
+body {
+    background-color: #800000; /* Maroon background */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;  /* White box (kit box) */
+    border-radius: 10px;        /* Rounded corners */
+    padding: 30px 40px;         /* Padding inside the container */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;           /* Limiting max width for smaller screens */
+    text-align: center;
+}
+
+/* Heading Styling */
+h2 {
+    font-weight: bold;
+    color: #800000;  /* Maroon color to match background */
+    margin-bottom: 30px;
+}
+
+/* Input Field Styling */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #800000; /* Maroon background for the button */
+    border-color: #800000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #660000; /* Darker maroon on hover */
+    border-color: #660000;
+}
+
+/* Error Message Styling */
+.text-danger {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+}
