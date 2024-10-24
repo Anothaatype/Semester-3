@@ -1,0 +1,119 @@
+/* Body Styling */
+body {
+    background-color: #f2f2f2;  /* Light Gray background */
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Container Styling for Price Check Section */
+.price-check-section {
+    background-color: white;  /* White background for the price check section */
+    border-radius: 10px;      /* Rounded corners */
+    padding: 50px 70px;       /* Padding inside the container */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 450px;         /* Limiting max width */
+    text-align: left;         /* Align text to the left for better readability */
+}
+
+/* Heading Styling */
+h2 {
+    font-weight: bold;
+    color: #800000;           /* Maroon color for heading */
+    margin-bottom: 20px;      /* Reduced bottom margin for compactness */
+    text-align: center;
+}
+
+/* Form Field Styling */
+form {
+    display: flex;
+    flex-direction: column;    /* Stack form fields vertically */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;       /* Space between form groups */
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;       /* Space between label and input */
+    text-align: left;
+}
+
+/* Input and Select Styling */
+input[type="number"],
+select {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;               /* Make inputs full width */
+    box-sizing: border-box;    /* Include padding and border in element's total width and height */
+}
+
+/* Custom Dropdown Arrow */
+select {
+    appearance: none;          /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+/* Button Styling */
+button {
+    background-color: #800000; /* Maroon background for the button */
+    border: none;              /* Remove border */
+    color: #ffffff;           /* Text color */
+    padding: 10px;            /* Padding inside the button */
+    border-radius: 5px;       /* Rounded corners */
+    width: 100%;              /* Full width */
+    font-size: 16px;          /* Font size */
+    margin-top: 20px;         /* Space above button */
+    cursor: pointer;          /* Pointer cursor on hover */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #660000; /* Darker maroon on hover */
+}
+
+/* Result Section Styling */
+#result {
+    margin-top: 30px; /* Space above result section */
+    font-weight: bold; /* Make results bold */
+    color: #333;       /* Darker color for better readability */
+    background-color: lightgray;
+    padding : 10px;
+    border-radius: 5px;
+}
+
+.total-payment {
+    margin-top: 10px; /* Space above total payment */
+    font-size: 18px;  /* Slightly larger font for emphasis */
+}
+
+/* Footer Styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation Bar (Header) */
+.navbar {
+    margin-bottom: 20px; /* Ensure the content doesn't overlap the navbar */
+}
+
+
