@@ -9,7 +9,7 @@
     <h2>Data Anggota</h2>
     <a href="create.php" class="btn-tambah">Tambah Anggota</a>
     <?php
-    include("koneksi.php");
+    include('koneksi.php');
 
     $query = "SELECT * FROM anggota ORDER BY id DESC";
     $result = mysqli_query($koneksi, $query);
@@ -19,18 +19,18 @@
         echo "<table>";
         echo "<tr><th>No</th><th>Nama</th><th>Jenis Kelamin</th><th>Alamat</th><th>No. Telp</th><th>Aksi</th></tr>";
         while ($row = mysqli_fetch_array($result)) {
-            $kelamin = ($row['jenis_kelamin'] == 'L') ? 'Laki-Laki' : 'Perempuan';
+            $kelamin = ($row['jenis_kelamin'] === 'L') ? 'Laki-Laki' : 'Perempuan';
             echo "<tr>";
             echo "<td>" . $no++ . "</td>";
-            echo "<td>" . $row['nama'] . "</td>";
+            echo "<td>" . $row["nama"] . "</td>";
             echo "<td>" . $kelamin . "</td>";
-            echo "<td>" . $row['alamat'] . "</td>";
-            echo "<td>" . $row['no_telp'] . "</td>";
+            echo "<td>" . $row["alamat"] . "</td>";
+            echo "<td>" . $row["no_telp"] . "</td>";
             echo "<td>
-                <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
-                <a href='#' onclick='konfirmasiHapus(" . $row['id'] . ", \"" . $row['nama'] . "\")'>Hapus</a>
+                <a href='edit.php?id=" . $row["id"] . "'>Edit</a> |
+                <a href='#' onclick='konfirmasiHapus(" . $row["id"] . ", \"" . $row["nama"] . "\")'>Hapus</a>
                 </td>";
-            echo "</tr>";
+            "</tr>";
         }
         echo "</table>";
     } else {

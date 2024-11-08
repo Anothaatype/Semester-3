@@ -41,8 +41,7 @@
             <input type="text" name="no_telp" id="no_telp" value="<?php echo $row['no_telp']; ?>" required>
 
             <button type="submit">Simpan Perubahan</button>
-            <a href="index.php"   
- class="btn-kembali">Kembali</a>
+            <a href="index.php" class="btn-kembali">Kembali</a>
         </form>
     </div>
 
