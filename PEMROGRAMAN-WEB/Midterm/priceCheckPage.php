@@ -21,6 +21,7 @@ if (!isset($_SESSION['username'])) {
     include 'header.php';
     ?>
 
+
 <section class="price-check-section">
         <h2>Input to Check The Price</h2>
         <form id="priceCheckForm">
@@ -64,7 +65,8 @@ if (!isset($_SESSION['username'])) {
     <script>
     function calculatePrice() {
         // Get input values
-        const weight = parseFloat(document.getElementById("weight").value);
+        const weightElement = document.getElementById("weight");
+        let weight = parseInt(weightElement.value);
         const service = document.getElementById("service").value;
         const laundryType = document.getElementById("laundryType").value;
         const membership = document.getElementById("membership").value;
@@ -73,16 +75,17 @@ if (!isset($_SESSION['username'])) {
         let pricePerKg;
         let discount = 0;
 
+
         // Set price per kg based on service type
         switch (service) {
             case "wash-dry":
-                pricePerKg = 5; // Example price
+                pricePerKg = 1000; // Example price
                 break;
             case "wash-ironing":
-                pricePerKg = 7; // Example price
+                pricePerKg = 1200; // Example price
                 break;
             case "ironing-only":
-                pricePerKg = 4; // Example price
+                pricePerKg = 900; // Example price
                 break;
             default:
                 pricePerKg = 0; // Fallback
@@ -90,7 +93,7 @@ if (!isset($_SESSION['username'])) {
 
         // Adjust prices based on laundry type
         if (laundryType === "express") {
-            pricePerKg *= 1.5; // Example: express service costs 50% more
+            pricePerKg += 200; // Example: express service costs 50% more
         }
 
         // Calculate total price
@@ -103,6 +106,10 @@ if (!isset($_SESSION['username'])) {
 
         // Calculate final payment
         let finalPayment = totalPrice - discount;
+
+        totalPrice = Math.max(totalPrice, 0);
+        totalDiscount = Math.max(totalDiscount, 0);
+        finalPayment = Math.max(finalPayment, 0);
 
         // Display results
         document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);

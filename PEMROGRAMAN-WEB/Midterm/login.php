@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // It use for checking the username and password also create an alert if the password or username is wrong
     // Validate credentials
     if ($username === $correct_username && $password === $correct_password) {
         // Set session variable

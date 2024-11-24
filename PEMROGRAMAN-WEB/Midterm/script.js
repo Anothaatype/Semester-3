@@ -11,21 +11,22 @@ $(document).ready(function () {
             $("#usernameError").hide();
         }
 
-        // Validate password
-        let password = $("#password").val();
-        if (password === "") {
-            $("#passwordError").text("Must be filled").show();
-            isValid = false;
-        } else if (password.length > 6) {
-            $("#passwordError").text("Password is more than 6 characters").show();
-            isValid = false;
-        } else if (!(password.match(/[A-Z]/) && password.match(/[a-z]/))) {
-            $("#passwordError").text("Password must be uppercase and lowercase.").show();
-            isValid = false;
+        // Validate the password field
+        let password = $("#password").val(); // Get the value of the password field
+        if (password === "") { // Check if the password field is empty
+            $("#passwordError").text("Must be filled").show(); // Show error message
+            isValid = false; // Mark the form as invalid
+        } else if (password.length > 6) { // Check if the password is longer than 6 characters
+            $("#passwordError").text("Password is more than 6 characters").show(); // Show error message
+            isValid = false; // Mark the form as invalid
+        } else if (!(password.match(/[A-Z]/) && password.match(/[a-z]/))) { // Check if the password contains both uppercase and lowercase letters
+            $("#passwordError").text("Password must be uppercase and lowercase.").show(); // Show error message
+            isValid = false; // Mark the form as invalid
         } else {
-            $("#passwordError").hide();
+            $("#passwordError").hide(); // Hide the error message if the field is valid
         }
 
+        // to sent the form if it is valid
         if (isValid) {
             this.submit(); // Submit if validation passes
         }
